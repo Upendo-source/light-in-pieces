@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light in Pieces by Upendo Andrew</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .sticky-cta {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4"> LIGHT IN PIECES</h1>
+            <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+                Light in Pieces by Upendo Andrew offers thought-provoking articles that demystify philosophy, focusing on resilience, perseverance, growth, and human consciousness. Unlock insights to inspire your personal journey today.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#donate" class="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-500 transition">Donate to Support</a>
+                <a href="#account" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Create Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Why Light in Pieces?</h2>
+            <p class="text-lg max-w-3xl mx-auto mb-6">
+                Dive into a world of self-literature where philosophy meets practical wisdom. Upendo Andrew’s articles explore resilience, personal growth, and collective consciousness, offering clarity and inspiration for life’s challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Support Upendo’s Work</h2>
+            <p class="text-lg mb-6 max-w-2xl mx-auto">
+                Your donations help keep *Light in Pieces* thriving. Send your support directly via mobile to <strong>+254758500585</strong>.
+            </p>
+            <a href="tel:+254758500585" class="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-500 transition">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Account Creation Section -->
+<section id="account" class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Join the Community</h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Create an account to receive exclusive updates, early access to new articles, and join a community passionate about growth and consciousness.
+        </p>
+        <form name="account-creation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" class="max-w-md mx-auto space-y-4">
+            <input type="hidden" name="form-name" value="account-creation">
+            <p class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+            <input type="text" name="name" placeholder="Full Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            <input type="email" name="email" placeholder="Email Address" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Create Account</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-lg mb-4">
+                Reach out to Upendo Andrew for inquiries or feedback:
+            </p>
+            <p class="text-lg mb-2"><strong>Phone:</strong> <a href="tel:+254758500585">+254758500585</a></p>
+            <p class="text-lg mb-6"><strong>Email:</strong> <a href="mailto:upendo.au@gmail.com">upendo.au@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Light in Pieces by Upendo Andrew. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="fixed bottom-4 right-4 sticky-cta">
+        <a href="#donate" class="bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-500 transition">Support Now</a>
+    </div>
+
+    <script>
+        // Simple form submission handling
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for joining the Light in Pieces community!');
+            e.target.reset();
+        });
+
+        // Sticky CTA visibility on scroll
+        window.addEventListener('scroll', () => {
+            const stickyCTA = document.querySelector('.sticky-cta');
+            if (window.scrollY > 300) {
+                stickyCTA.style.opacity = '1';
+            } else {
+                stickyCTA.style.opacity = '0';
+            }
+        });
+    </script>
+</body>
+</html>
